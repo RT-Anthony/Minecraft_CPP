@@ -149,6 +149,7 @@
     <ClInclude Include="src\Model.h" />
     <ClInclude Include="src\Shaders\ShaderLoader.h" />
     <ClInclude Include="src\Shaders\ShaderProgram.h" />
+    <ClInclude Include="src\Shaders\SimpleShader.h" />
     <ClInclude Include="src\States\GameState.h" />
     <ClInclude Include="src\States\Playing.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -565,10 +566,15 @@
     <ClCompile Include="src\Display.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\Shaders\ SimpleShader.cpp" />
     <ClCompile Include="src\Shaders\ShaderLoader.cpp" />
     <ClCompile Include="src\Shaders\ShaderProgram.cpp" />
     <ClCompile Include="src\States\GameState.cpp" />
     <ClCompile Include="src\States\Playing.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Shaders\SimpleFragment.glsl" />
+    <None Include="Data\Shaders\SimpleVertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

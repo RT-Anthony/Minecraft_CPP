@@ -31,6 +31,12 @@
     <Filter Include="src\States">
       <UniqueIdentifier>{14b49898-5c9d-4008-af61-603cbe36329c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{96eff31f-e305-48ce-97b2-fa8a33183df7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Shaders">
+      <UniqueIdentifier>{7148b910-706a-4880-bb03-23215535ab07}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vendor\glm\glm\common.hpp">
@@ -1278,6 +1284,9 @@
     <ClInclude Include="src\Shaders\ShaderLoader.h">
       <Filter>src\Shaders</Filter>
     </ClInclude>
+    <ClInclude Include="src\Shaders\SimpleShader.h">
+      <Filter>src\Shaders</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -1304,5 +1313,16 @@
     <ClCompile Include="src\Shaders\ShaderLoader.cpp">
       <Filter>src\Shaders</Filter>
     </ClCompile>
+    <ClCompile Include="src\Shaders\ SimpleShader.cpp">
+      <Filter>src\Shaders</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Shaders\SimpleFragment.glsl">
+      <Filter>Data\Shaders</Filter>
+    </None>
+    <None Include="Data\Shaders\SimpleVertex.glsl">
+      <Filter>Data\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

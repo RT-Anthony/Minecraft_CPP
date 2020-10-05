@@ -3,6 +3,8 @@
 #include "GameState.h"
 #include "Model.h"
 
+#include "Shaders/SimpleShader.h"
+
 class Application;
 
 namespace State
@@ -18,6 +20,8 @@ namespace State
 
     private:
         Model m_model;
+
+        Shader::SimpleShader m_Shader;
     };
 
 }

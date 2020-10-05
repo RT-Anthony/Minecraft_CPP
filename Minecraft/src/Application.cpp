@@ -14,11 +14,12 @@ void Application::runMainGameLoop()
     while (Display::isOpen())
     {
         Display::clear();
-        Display::update();
 
         m_states.top()->input();
         m_states.top()->update();
         m_states.top()->draw();
+
+        Display::update();
 
         Display::checkForClose();
     }
