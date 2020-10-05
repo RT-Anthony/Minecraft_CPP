@@ -4,14 +4,24 @@
 
 namespace State
 {
+    std::vector <GLfloat> vertexPositions = { 0.5, 0.5,
+                                             -0.5, 0.5,
+                                             -0.5, -0.5,
+                                             -0.5, -0.5,
+                                             0.5, -0.5,
+                                             0.5, 0.5 };
+
+    std::vector <GLfloat> textureCoords = { 1.0, 1.0,
+                                            0.0, 1.0,
+                                            0.0, 0.0,
+                                            0.0, 0.0,
+                                            1.0, 0.0,
+                                            1.0, 1.0};
+
     Playing::Playing(Application & application) : GameState(application)
-        , m_model({0.5, 0.5,
-                   -0.5, 0.5,
-                   -0.5, -0.5,
-                   -0.5, -0.5,
-                   0.5, -0.5,
-                   0.5, 0.5})
+        , m_model(vertexPositions, textureCoords)
     {
+        m_texture.load("grass");
     }
     void Playing::input()
     {
@@ -22,11 +32,14 @@ namespace State
 
     void Playing::draw()
     {
-        m_Shader.bind();
+        m_shader.bind();
         m_model.bind();
+        m_texture.bind();
+
         glDrawArrays(GL_TRIANGLES, 0, 6);
 
+        m_texture.unbind();
         m_model.unbind();
-        m_Shader.unbind();
+        m_shader.unbind();
     }
 }

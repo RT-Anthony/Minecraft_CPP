@@ -37,6 +37,12 @@
     <Filter Include="Data\Shaders">
       <UniqueIdentifier>{7148b910-706a-4880-bb03-23215535ab07}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Texture">
+      <UniqueIdentifier>{eed6dcbd-859c-476d-a307-a5b3d2463505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Textures">
+      <UniqueIdentifier>{20c66033-9124-437e-a248-2ba65ccc29b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vendor\glm\glm\common.hpp">
@@ -1287,6 +1293,9 @@
     <ClInclude Include="src\Shaders\SimpleShader.h">
       <Filter>src\Shaders</Filter>
     </ClInclude>
+    <ClInclude Include="src\Texture\Texture.h">
+      <Filter>src\Texture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -1316,6 +1325,9 @@
     <ClCompile Include="src\Shaders\ SimpleShader.cpp">
       <Filter>src\Shaders</Filter>
     </ClCompile>
+    <ClCompile Include="src\Texture\Texture.cpp">
+      <Filter>src\Texture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Shaders\SimpleFragment.glsl">
@@ -1324,5 +1336,10 @@
     <None Include="Data\Shaders\SimpleVertex.glsl">
       <Filter>Data\Shaders</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Data\Textures\grass.png">
+      <Filter>Data\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

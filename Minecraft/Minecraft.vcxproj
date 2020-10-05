@@ -94,7 +94,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -152,6 +152,7 @@
     <ClInclude Include="src\Shaders\SimpleShader.h" />
     <ClInclude Include="src\States\GameState.h" />
     <ClInclude Include="src\States\Playing.h" />
+    <ClInclude Include="src\Texture\Texture.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_fixes.hpp" />
@@ -571,10 +572,14 @@
     <ClCompile Include="src\Shaders\ShaderProgram.cpp" />
     <ClCompile Include="src\States\GameState.cpp" />
     <ClCompile Include="src\States\Playing.cpp" />
+    <ClCompile Include="src\Texture\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\Shaders\SimpleFragment.glsl" />
     <None Include="Data\Shaders\SimpleVertex.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Data\Textures\grass.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,6 +4,7 @@
 #include "Model.h"
 
 #include "Shaders/SimpleShader.h"
+#include "Texture/Texture.h"
 
 class Application;
 
@@ -21,7 +22,8 @@ namespace State
     private:
         Model m_model;
 
-        Shader::SimpleShader m_Shader;
+        Shader::SimpleShader m_shader;
+        Texture::BasicTexture m_texture;
     };
 
 }
