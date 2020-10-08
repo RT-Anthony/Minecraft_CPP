@@ -4,11 +4,16 @@ namespace Shader
 {
     SimpleShader::SimpleShader() : ShaderProgram("SimpleVertex", "SimpleFragment")
     {
-        bindAttributes();
+        getUniformLocations();
     }
 
-    void SimpleShader::bindAttributes()
+    void SimpleShader::setTime(float time)
     {
-        bindAttribute(0, "inVertexPosition");
+        loadFloat(m_locationTime, time);
+    }
+
+    void SimpleShader::getUniformLocations()
+    {
+        m_locationTime = glGetUniformLocation(getID(), "time");
     }
 }

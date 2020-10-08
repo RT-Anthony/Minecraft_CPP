@@ -1,9 +1,14 @@
 #include <iostream>
-#include<GL/glew.h>
+#include <GL/glew.h>
+
+#include <SFML/System/Clock.hpp>
+
 #include "Playing.h"
 
 namespace State
 {
+    sf::Clock clock;
+
     std::vector <GLfloat> vertexPositions = { 0.5, 0.5,
                                              -0.5, 0.5,
                                              -0.5, -0.5,
@@ -32,6 +37,8 @@ namespace State
     void Playing::draw()
     {
         m_shader.bind();
+        m_shader.setTime(clock.getElapsedTime().asSeconds());
+
         m_model.bind();
         m_texture.bind();
 
