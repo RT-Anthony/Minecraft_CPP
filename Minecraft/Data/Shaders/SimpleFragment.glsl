@@ -9,5 +9,5 @@ uniform float time;
 
 void main()
 {
-    color = texture(ourTexture, passTextureCoords) * sin(2.8 * time);
+    color = texture(ourTexture, passTextureCoords) * sin(time * time);
 }
