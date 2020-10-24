@@ -6,7 +6,8 @@
 
 #include "../Shaders/SimpleShader.h"
 
-class Model;
+class Quad;
+struct Entity;
 
 namespace Renderer
 {
@@ -14,14 +15,14 @@ namespace Renderer
     class Simple
     {
     public:
-        void draw(const Model& model);
+        void draw(const Quad& quad);
 
-        void update();
+        void update(const Entity& camera);
 
     private:
-        void prepare(const Model& model);
+        void prepare(const Quad& quad);
 
-        std::vector<const Model*> m_models;
+        std::vector<const Quad*> m_quads;
         Shader::SimpleShader m_shader;
         sf::Clock m_clock;
     };

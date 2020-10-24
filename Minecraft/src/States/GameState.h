@@ -1,6 +1,7 @@
 #pragma once
 
 class Application;
+struct Entity;
 
 namespace Renderer
 {
@@ -14,8 +15,8 @@ namespace State
     public:
         GameState(Application& application);
 
-        virtual void input() = 0;
-        virtual void update() = 0;
+        virtual void input(Entity& camera) = 0;
+        virtual void update(Entity& camera) = 0;
         virtual void draw(Renderer::Master& renderer) = 0;
 
     protected:

@@ -46,6 +46,12 @@
     <Filter Include="src\Renderer">
       <UniqueIdentifier>{cd1c9dff-4fee-4749-a4bb-eaa8b5dd7159}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Math">
+      <UniqueIdentifier>{caad849d-e0e4-4b4f-9610-958c89c35005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Temp">
+      <UniqueIdentifier>{4182ccc1-0b7b-4a5d-b5ba-5ea99d2b9a48}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vendor\glm\glm\common.hpp">
@@ -1305,6 +1311,18 @@
     <ClInclude Include="src\Renderer\Simple.h">
       <Filter>src\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\GlmCommon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Entity.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Temp\Quad.h">
+      <Filter>src\Temp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math\Matrix.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -1342,6 +1360,12 @@
     </ClCompile>
     <ClCompile Include="src\Renderer\Simple.cpp">
       <Filter>src\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Temp\Quad.cpp">
+      <Filter>src\Temp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Math\Matrix.cpp">
+      <Filter>src\Math</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -10,34 +10,42 @@ namespace State
 {
     sf::Clock clock;
 
-    std::vector <GLfloat> vertexPositions = { 0.5, 0.5,
-                                             -0.5, 0.5,
-                                             -0.5, -0.5,
-                                             0.5, -0.5 };
-
-    std::vector <GLfloat> textureCoords = { 1.0, 1.0,
-                                            0.0, 1.0,
-                                            0.0, 0.0,
-                                            1.0, 0.0};
-
-    std::vector<GLuint> indices = { 0, 1, 2,
-                                    2, 3, 0 };
-
     Playing::Playing(Application & application) : GameState(application)
-        , m_model(vertexPositions, textureCoords, indices)
     {
         m_texture.load("grass");
         m_texture.bind();
+
+        int testSize = 50;
+
+        for (int x = -testSize; x < testSize; x++)
+        {
+            for (int z = testSize; z > -testSize; z--)
+            {
+                Quad* quad = new Quad();
+                quad->rotation.x = 90;
+                quad->position = { x, -1, z };
+                m_quads.push_back(quad);
+            }
+        }
+        std::cout << m_quads.size() << std::endl;
     }
-    void Playing::input()
+
+    void Playing::input(Entity& camera)
     {
+
     }
-    void Playing::update()
+
+    void Playing::update(Entity& camera)
     {
+        for (auto& quad : m_quads)
+        {
+            quad->position.y = sin(clock.getElapsedTime().asSeconds());
+        }
     }
 
     void Playing::draw(Renderer::Master& renderer)
     {
-        renderer.draw(m_model);
+        for (auto& quad : m_quads)
+            renderer.draw(*quad);
     }
 }

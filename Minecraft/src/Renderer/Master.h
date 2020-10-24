@@ -2,7 +2,8 @@
 
 #include "Simple.h"
 
-class Model;
+class Quad;
+struct Entity;
 
 namespace Renderer
 {
@@ -10,8 +11,8 @@ namespace Renderer
     {
     public:
         void clear();
-        void update();
-        void draw(const Model& model);
+        void update(const Entity& camera);
+        void draw(const Quad& model);
 
     private:
         Simple m_simpleRenderer;

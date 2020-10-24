@@ -2,6 +2,8 @@
 
 namespace Display
 {
+    constexpr int WIDTH = 1280;
+    constexpr int HEIGHT = 720;
     void init();
     void close();
 
