@@ -1,6 +1,7 @@
 #include "Master.h"
 
 #include "../Display.h"
+#include "../Camera.h"
 
 namespace Renderer
 {
@@ -10,7 +11,7 @@ namespace Renderer
         Display::clear();
     }
 
-    void Master::update(const Entity& camera)
+    void Master::update(const Camera& camera)
     {
         m_simpleRenderer.update(camera);
         Display::update();

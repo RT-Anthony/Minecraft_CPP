@@ -19,6 +19,8 @@ namespace Display
                                                     "Window", sf::Style::Close, settings); //Style::Close prevents window resizing
         glewInit();
         glViewport(0, 0, WIDTH, HEIGHT);
+
+        window->setMouseCursorVisible(false);
     }
 
     void close()
@@ -42,7 +44,7 @@ namespace Display
         sf::Event _event;
         while (window->pollEvent(_event))
         {
-            if (_event.type == sf::Event::Closed)
+            if (_event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
             {
                 close();
             }
@@ -52,6 +54,11 @@ namespace Display
     bool isOpen()
     {
         return window->isOpen();
+    }
+
+    const sf::Window& get()
+    {
+        return *window;
     }
 
 }
