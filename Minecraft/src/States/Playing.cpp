@@ -17,6 +17,7 @@ namespace State
         m_texture.bind();
 
         m_quad.position.z -= 2;
+        m_quad.position.y -= 2;
     }
 
     void Playing::input(Camera& camera)
