@@ -11,9 +11,8 @@ namespace State
 {
     sf::Clock clock;
 
-    Playing::Playing(Application & application) : GameState(application)
+    Playing::Playing(Application & application) : GameState(application), m_texture("TextureAtlas", 512, 16), m_quad(m_texture)
     {
-        m_texture.load("grass");
         m_texture.bind();
 
         m_quad.position.z -= 2;
@@ -27,6 +26,7 @@ namespace State
 
     void Playing::update(Camera& camera, float dt)
     {
+        //m_quad.rotation += 0.1;
         camera.input(dt);
     }
 

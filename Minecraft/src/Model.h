@@ -6,8 +6,13 @@
 class Model
 {
 public:
+    Model() = default;
     Model(const std::vector<GLfloat>& vertexPositions, const std::vector<GLfloat>& textureCoordinates, const std::vector<GLuint>& indices);
     ~Model();
+
+    void addData(const std::vector<GLfloat>& vertexPositions,
+                 const std::vector<GLfloat>& textureCoordinates,
+                 const std::vector<GLuint>& indicies);
 
     void bind() const;
     void unbind() const;

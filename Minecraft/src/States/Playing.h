@@ -4,7 +4,7 @@
 #include "Model.h"
 
 #include "Shaders/SimpleShader.h"
-#include "Texture/Texture.h"
+#include "Texture/TextureAtlas.h"
 
 #include "Temp/Quad.h"
 
@@ -27,7 +27,7 @@ namespace State
         //std::vector<Quad*> m_quads;
 
         Shader::SimpleShader m_shader;
-        Texture::BasicTexture m_texture;
+        Texture::Atlas m_texture;
     };
 
 }
